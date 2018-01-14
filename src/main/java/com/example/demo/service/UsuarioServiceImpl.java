@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public Usuarios save(Usuarios user) {
 		return this.usuarioRepository.save(user);
+	}
+
+	@Override
+	public List<Usuarios> findAll() {
+		return this.usuarioRepository.findAll();
 	}
 
 }
